@@ -116,6 +116,7 @@ fetchText("./historia.json", whatToDoWhenFileIsRead, whatToDoIfError);
 
 function whatToDoWhenFileIsRead(data) {
   constHistoria = data;
+  historia = constHistoria;
   återställ();
   aktivtRum = "limbo";
   document.getElementById("terminal").hidden = false;
