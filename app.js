@@ -116,7 +116,7 @@ fetchText("./historia.json", whatToDoWhenFileIsRead, whatToDoIfError);
 
 function whatToDoWhenFileIsRead(data) {
   constHistoria = data;
-  historia = constHistoria;
+  historia = data;
   återställ();
   aktivtRum = "limbo";
   document.getElementById("terminal").hidden = false;
@@ -179,7 +179,6 @@ function återställ() {
   sessionStorage.clear();
   txtCnt = 0;
   upplåst = false;
-  historia = constHistoria;
 }
 //Gör så att man kan trycka på uppåtpilen och gå nedåt i listan med senast skrivna kommandon
 function senasteTextNer() {
@@ -357,8 +356,8 @@ function värderaText() {
                 låstDörr();
                 break;
 
-              case "katakomber":
-                katakomber();
+              case "katakomb":
+                katakomb();
                 break;
 
               case "kokosnötpussel":
