@@ -371,6 +371,7 @@ function värderaText() {
             }
           }
         }
+        break;
       } else if (i == -1) {
         let felText = document.createElement("p");
         felText.innerText =
