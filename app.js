@@ -113,6 +113,7 @@ fetchText("./historia.json", whatToDoWhenFileIsRead, whatToDoIfError);
 
 function whatToDoWhenFileIsRead(data) {
   const constHistoria = data;
+  historia = constHistoria;
   document.getElementById("terminal").hidden = false;
 }
 
