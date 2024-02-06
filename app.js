@@ -116,7 +116,8 @@ fetchText("./historia.json", whatToDoWhenFileIsRead, whatToDoIfError);
 
 function whatToDoWhenFileIsRead(data) {
   constHistoria = data;
-  historia = constHistoria;
+  återställ();
+  aktivtRum = "limbo";
   document.getElementById("terminal").hidden = false;
 }
 
@@ -578,8 +579,6 @@ function förråd() {
 document.addEventListener("keydown", knappTryck);
 
 //-------Start------------
-återställ();
-aktivtRum = "limbo";
 document.getElementById("terminal").hidden = true; //Bara till för att se att spelaren spelar i liveserver.
 
 //Startar spelet på nytt.
