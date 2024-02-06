@@ -49,6 +49,7 @@
 //v0.14 06-02-24
 //La till ni()
 //Buggfixar
+//La till erumHistorik()
 
 //-------Definitioner-----
 
@@ -61,6 +62,7 @@ let txtCnt = 0;
 let txtNmr;
 let senasteText;
 let aktivtRum;
+let erumHis = [];
 let föremål = {
   nyckel: false,
   buske: false,
@@ -101,7 +103,7 @@ $(document.getElementById("terminal")).t({
 //som han skrivit till JavaScript, 15p19. Jag har modifierat den lite.
 
 let historia;
-let constHistoria;
+let cHistoria;
 
 async function fetchText(url, success, failure) {
   fetch(url)
@@ -115,9 +117,8 @@ async function fetchText(url, success, failure) {
 fetchText("./historia.json", whatToDoWhenFileIsRead, whatToDoIfError);
 
 function whatToDoWhenFileIsRead(data) {
-  constHistoria = data;
   historia = data;
-  återställ();
+  sessionStorage.clear();
   aktivtRum = "limbo";
   document.getElementById("terminal").hidden = false;
 }
@@ -179,6 +180,10 @@ function återställ() {
   sessionStorage.clear();
   txtCnt = 0;
   upplåst = false;
+  for (let i = erumHis.length - 1; i > -1; i--) {
+    historia[erumHis[i]].erum = false;
+  }
+  erumHis = [];
 }
 //Gör så att man kan trycka på uppåtpilen och gå nedåt i listan med senast skrivna kommandon
 function senasteTextNer() {
@@ -454,7 +459,15 @@ function erum() {
   }
   skrivRumText("erumText");
   historia[aktivtRum].erum = true;
+  erumHistorik(aktivtRum);
   aktivtRum = aktivtRum + "e";
+}
+
+//Denna hjälper återställ() att återställa alla erum.
+function erumHistorik(erum) {
+  let använtErum = [erum];
+  erumHis.push(använtErum);
+  console.log(erumHis);
 }
 
 //Skriver ut i termnialen det man anger i funktionsvillkoret
