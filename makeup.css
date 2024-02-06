@@ -1,0 +1,88 @@
+::-webkit-scrollbar {
+    color: black;
+    width: 0px;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    overflow-y: auto;
+    overflow-x: auto; 
+    background-color: black;
+}
+body{
+    background-color: rgb(71, 71, 71);
+    font-family: 'Poppins', sans-serif;
+}
+ins,del{text-decoration:none;}
+kbd{font-family:inherit;}
+s{display:none;}
+div {
+    margin: none;
+    padding: none;
+}
+
+#wrapper{
+    padding: none;
+    border: none;
+    box-shadow: black 3px 3px 10px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    font-family:'vt323',monospace;
+    font-size: 25px;
+    color: white;
+}
+
+span.textbox {
+    background-color: black;
+    color: white;
+    line-height:20px;
+    height:25px;
+    padding:0px;
+    border: 0px;
+    font-size:25px;
+    font-family: "vt323",monospace;
+}
+
+span.textbox input {
+  border: 0px;
+    background-color: black;
+    color: white;
+    font-family: "vt323",monospace;
+}
+
+#body  {
+    display: flex;
+    flex-direction: column-reverse
+}
+
+#input{
+    font-family:'vt323',monospace;
+    font-size: 25px;
+    color: white;  
+    width: 98%;
+}
+input.textruta:focus {
+    outline-width: 0;
+
+}
+.textruta:focus {
+    animation: 1ms infinite; 
+}
+.textruta{
+    caret-color: transparent;
+}
+#dataInput{
+    font-family:'vt323',monospace;
+    color: white;
+    font-size: 25px;
+}
+
+#dataInput::file-selector-button {
+    background-color: black;
+    font-family:'vt323',monospace;
+    color: white;
+    font-size: 25px;
+    border-color: white;
+}
