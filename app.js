@@ -101,6 +101,7 @@ $(document.getElementById("terminal")).t({
 //som han skrivit till JavaScript, 15p19. Jag har modifierat den lite.
 
 let historia;
+let constHistoria;
 
 async function fetchText(url, success, failure) {
   fetch(url)
@@ -114,7 +115,7 @@ async function fetchText(url, success, failure) {
 fetchText("./historia.json", whatToDoWhenFileIsRead, whatToDoIfError);
 
 function whatToDoWhenFileIsRead(data) {
-  const constHistoria = data;
+  constHistoria = data;
   historia = constHistoria;
   document.getElementById("terminal").hidden = false;
 }
