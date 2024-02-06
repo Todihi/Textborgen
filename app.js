@@ -342,11 +342,11 @@ function värderaText() {
             fackla();
           } else if (cmdSvar.includes("avslut")) {
             if (cmdSvar[6] == 0) {
+              skrivRumText("avslut");
               slut(cmdSvar[7]);
-              skrivRumText("avslut");
             } else {
-              slut(cmdSvar[6] + cmdSvar[7]);
               skrivRumText("avslut");
+              slut(cmdSvar[6] + cmdSvar[7]);
             }
           } else {
             switch (cmdSvar) {
@@ -406,7 +406,6 @@ function värderaText() {
 //omedelbart eller om det finns monster i rummet, då detta påverkar.
 function tillRum(rum) {
   aktivtRum = rum;
-  console.log(aktivtRum)
   if (historia[aktivtRum].erum) {
     while (historia[aktivtRum].erum) {
       aktivtRum = aktivtRum + "e";
@@ -443,6 +442,7 @@ function tillRum(rum) {
       slut(historia[aktivtRum].avslut[0] + historia[aktivtRum].avslut[1]);
     }
   }
+  console.log(aktivtRum);
 }
 
 //En funktion som gör så att event i rum bara kan göras en gång
