@@ -48,6 +48,7 @@
 //La till kokokosnötpussel()
 //v0.14 06-02-24
 //La till ni()
+//Buggfixar
 
 //-------Definitioner-----
 
@@ -98,7 +99,6 @@ $(document.getElementById("terminal")).t({
 //Flera funktioner för att läsa in historian från en JSONfil
 //Dessa har jag tagit från Mauritz Blomqvists undervisningsmaterial
 //som han skrivit till JavaScript, 15p19. Jag har modifierat den lite.
-let historia;
 
 async function fetchText(url, success, failure) {
   fetch(url)
@@ -112,7 +112,7 @@ async function fetchText(url, success, failure) {
 fetchText("./historia.json", whatToDoWhenFileIsRead, whatToDoIfError);
 
 function whatToDoWhenFileIsRead(data) {
-  historia = data;
+  const constHistoria = data;
   document.getElementById("terminal").hidden = false;
 }
 
@@ -173,6 +173,7 @@ function återställ() {
   sessionStorage.clear();
   txtCnt = 0;
   upplåst = false;
+  historia = constHistoria;
 }
 //Gör så att man kan trycka på uppåtpilen och gå nedåt i listan med senast skrivna kommandon
 function senasteTextNer() {
@@ -573,7 +574,7 @@ function förråd() {
 document.addEventListener("keydown", knappTryck);
 
 //-------Start------------
-sessionStorage.clear();
+återställ();
 aktivtRum = "limbo";
 document.getElementById("terminal").hidden = true; //Bara till för att se att spelaren spelar i liveserver.
 
