@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textborgen</title>
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mntn-dev/t.js/t.min.js"></script>
+    <!-- google-font-länken och de två scriptsen är för att få hemsidan att se ut som en terminial
+    tog det från https://www.linkedin.com/pulse/how-make-terminal-web-felix-j- och tog hjälp av t.js https://mntn-dev.github.io/t.js/ -->
+    <link rel="stylesheet" href="makeup.css">
+    <!-- css-egenskaperna har jag tagit insperation från Felix J (kolla länken ovan) -->
+</head>
+<body id="body">
+    <div id="wrapper">
+        <div id="terminal">
+            <p class="terminal-text"> >&nbsp;<s>10</s>&nbsp;_______&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_&nbsp;&nbsp;&nbsp;____&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                >&nbsp;|__&nbsp;&nbsp;&nbsp;__|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;|&nbsp;|&nbsp;&nbsp;_&nbsp;\&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                >&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;|&nbsp;_____&nbsp;&nbsp;_|&nbsp;|_|&nbsp;|_)&nbsp;|&nbsp;___&nbsp;&nbsp;_&nbsp;__&nbsp;__&nbsp;_&nbsp;&nbsp;___&nbsp;_&nbsp;__&nbsp;&nbsp;<br>
+                >&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;|/&nbsp;_&nbsp;\&nbsp;\/&nbsp;/&nbsp;__|&nbsp;&nbsp;_&nbsp;<&nbsp;/&nbsp;_&nbsp;\|&nbsp;'__/&nbsp;_`&nbsp;|/&nbsp;_&nbsp;\&nbsp;'_&nbsp;\&nbsp;<br>
+                >&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;|&nbsp;&nbsp;__/>&nbsp;&nbsp;<|&nbsp;|_|&nbsp;|_)&nbsp;|&nbsp;(_)&nbsp;|&nbsp;|&nbsp;|&nbsp;(_|&nbsp;|&nbsp;&nbsp;__/&nbsp;|&nbsp;|&nbsp;|<br>
+                >&nbsp;&nbsp;&nbsp;&nbsp;|_|\___/_/\_\\__|____/&nbsp;\___/|_|&nbsp;&nbsp;\__,&nbsp;|\___|_|&nbsp;|_|<br>
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__/&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<s>1</s>&nbsp;|___/</p><s>50</s>
+            <p class="terminal-text"> > <kbd>Välkommen!</kbd></p>
+            <p class="terminal-text"> > Här är en lista med några kommandon:</p>
+            <p class="terminal-text"> > <ins>!hjälp</ins>       <kbd> Tar fram listan med alla kommandon </kbd></p>
+            <p class="terminal-text"> > <ins>!start</ins>        Startar ett nytt spel</p>
+            <p class="terminal-text"> > <ins>!ändelser</ins>    <kbd> Tar fram listan med dem upplåsta ändelserna på spelet </kbd></p>
+        </div>
+        <span> 
+            <span class="textbox"> 
+                >
+                <input spellcheck="false" id="input" class="textruta" onblur="this.focus()" autofocus type="text" autofocus onfocus="this.select()"/>
+            </span>
+    </div>
+
+    
+</body>
+</html>
+<script src="app.js"></script>
+<!-- <ins> gör så att texten kommer fram på direkten (instant), <kbd> gör lite stavfel när texten skrivs ut. <s> ändrar hasitgheten texten skrivs fram. Skriver man vanligt så skrivs den fram-->
+    
