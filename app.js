@@ -302,7 +302,7 @@ function värderaText() {
       default:
         skrivText(inmatatText.substring(1));
     }
-  } else {
+  } else if (aktivtRum != "limbo") {
     for (let i = historia[aktivtRum].kommandon.length - 1; i > -2; i--) {
       let cmdSvar = historia[aktivtRum].kommandonSvar[i];
       if (inmatatText.includes(historia[aktivtRum].kommandon[i])) {
@@ -371,7 +371,6 @@ function värderaText() {
             }
           }
         }
-        break;
       } else if (i == -1) {
         let felText = document.createElement("p");
         felText.innerText =
@@ -380,8 +379,17 @@ function värderaText() {
           "'. Skriv '!hjälp' för hjälp  \n > ";
         div.appendChild(felText);
         scrollTo(0, document.getElementById("body").offsetHeight);
+        break;
       }
     }
+  } else {
+    let felText = document.createElement("p");
+    felText.innerText =
+      "> Okänt kommando: '" +
+      skrivenText +
+      "'. Skriv '!hjälp' för hjälp  \n > ";
+    div.appendChild(felText);
+    scrollTo(0, document.getElementById("body").offsetHeight);
   }
 }
 
@@ -565,6 +573,7 @@ document.addEventListener("keydown", knappTryck);
 
 //-------Start------------
 sessionStorage.clear();
+aktivtRum = "limbo";
 document.getElementById("terminal").hidden = true; //Bara till för att se att spelaren spelar i liveserver.
 
 //Startar spelet på nytt.
