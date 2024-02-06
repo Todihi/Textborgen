@@ -100,6 +100,8 @@ $(document.getElementById("terminal")).t({
 //Dessa har jag tagit från Mauritz Blomqvists undervisningsmaterial
 //som han skrivit till JavaScript, 15p19. Jag har modifierat den lite.
 
+let historia;
+
 async function fetchText(url, success, failure) {
   fetch(url)
     .then((response) => response.json())
