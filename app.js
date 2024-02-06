@@ -406,6 +406,7 @@ function värderaText() {
 //omedelbart eller om det finns monster i rummet, då detta påverkar.
 function tillRum(rum) {
   aktivtRum = rum;
+  console.log(aktivtRum)
   if (historia[aktivtRum].erum) {
     while (historia[aktivtRum].erum) {
       aktivtRum = aktivtRum + "e";
