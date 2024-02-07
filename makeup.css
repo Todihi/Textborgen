@@ -71,7 +71,7 @@ input.textruta:focus {
     animation: 1ms infinite; 
 }
 .textruta{
-    caret-color: white;
+    caret-color: transparent;
 }
 #dataInput{
     font-family:'vt323',monospace;
