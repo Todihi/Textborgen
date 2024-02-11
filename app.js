@@ -2,8 +2,8 @@
 
 /***************************************************
  *                                                 *
- *                 TextBorgen v0.14                *
- *          av Thor Hedeland, 06-02-24             *
+ *                 TextBorgen v1.1                 *
+ *          av Thor Hedeland, 11-02-24             *
  *                                                 *
  *                                                 *
  **************************************************/
@@ -46,10 +46,12 @@
 //Förfinade lite kod
 //v0.13 05-02-24
 //La till kokokosnötpussel()
-//v0.14 06-02-24
+//v1.0 06-02-24
 //La till ni()
 //Buggfixar
 //La till erumHistorik()
+//V1.1 11-02-24
+//Buggfixar
 
 //-------Definitioner-----
 
@@ -366,7 +368,7 @@ function värderaText() {
                 break;
 
               case "kokosnötpussel":
-                kokosnötPussel();
+                kokosnötpussel();
                 break;
 
               case "ni":
@@ -513,7 +515,7 @@ function katakomb() {
 //Låter dig öppna en lönndörr om du slår kokosnötter.
 function kokosnötpussel() {
   if (föremål.kokosnöt) {
-    tillRum("R60e");
+    erum("R60e");
   } else {
     skrivRumText("misslyckad");
   }
